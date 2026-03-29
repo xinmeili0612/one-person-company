@@ -1,8 +1,9 @@
 <view class="container" wx:if="{{result}}">
-  <view class="card">
-    <view class="tag">测试结果</view>
+  <view class="hero-card result-hero">
+    <view class="eyebrow">YOUR RESULT</view>
     <view class="title">{{result.profile.name}}</view>
-    <view class="subtitle">{{result.profile.intro}}</view>
+    <view class="subtitle">{{result.profile.why}}</view>
+    <view class="score-chip">当前建议：先把这条路径跑通，再考虑扩展</view>
     <button class="btn-primary" bindtap="goLead">领取进一步方案</button>
   </view>
 
@@ -14,21 +15,21 @@
   <view class="card" style="margin-top: 24rpx;">
     <view class="section-title">你的优势</view>
     <block wx:for="{{result.profile.strengths}}" wx:key="index">
-      <view class="subtitle">· {{item}}</view>
+      <view class="list-item">{{index + 1}}. {{item}}</view>
     </block>
   </view>
 
   <view class="card" style="margin-top: 24rpx;">
     <view class="section-title">你的风险</view>
     <block wx:for="{{result.profile.risks}}" wx:key="index">
-      <view class="subtitle">· {{item}}</view>
+      <view class="list-item">{{index + 1}}. {{item}}</view>
     </block>
   </view>
 
   <view class="card" style="margin-top: 24rpx;">
     <view class="section-title">7 天行动建议</view>
     <block wx:for="{{result.profile.plan}}" wx:key="index">
-      <view class="subtitle">{{index + 1}}. {{item}}</view>
+      <view class="list-item">{{index + 1}}. {{item}}</view>
     </block>
   </view>
 
