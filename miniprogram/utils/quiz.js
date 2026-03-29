@@ -2,168 +2,172 @@ const TYPES = {
   service: {
     key: 'service',
     name: '服务型一人公司',
-    intro: '你更适合先用已有专业能力直接服务客户，先跑通现金流，再逐步标准化。',
-    strengths: ['离钱近，验证快', '容易拿到第一批真实客户', '适合顾问、咨询、代做、陪跑'],
-    risks: ['容易被一对一交付绑住', '规模化难度高', '如果不做产品化，收入上限明显'],
-    plan: ['第 1-2 天：列出你能卖的 3 项服务', '第 3-4 天：写出 1 页服务介绍', '第 5 天：联系 10 个潜在客户', '第 6-7 天：拿到第一次深聊或试单']
+    intro: '你更适合从 服务型一人公司 开始。',
+    why: '你更适合直接把已有能力卖给客户，而不是先花很长时间做内容或做产品。你的优势在于：解决问题、快速交付、先拿结果。',
+    strengths: ['变现路径最短', '最容易拿到第一笔收入', '最适合从技能变现起步'],
+    risks: ['容易被一对一交付绑住', '收入容易跟时间强绑定', '如果不做标准化，会越做越累'],
+    plan: ['明确一个你最能解决的问题', '定义一个最小服务产品', '写清楚服务对象、价格、交付方式', '找 10 个潜在客户做访谈或试卖', '争取拿到第一个真实反馈或订单']
   },
   content: {
     key: 'content',
     name: '内容型一人公司',
-    intro: '你更适合通过持续表达建立信任，再把影响力转化为咨询、社群、知识产品或合作机会。',
-    strengths: ['适合长期积累复利', '容易建立个人品牌', '能形成稳定信任关系'],
-    risks: ['起量慢', '短期收入不稳定', '只输出不转化会空转'],
-    plan: ['第 1 天：确定一个细分主题', '第 2-3 天：写出 5 个内容选题', '第 4-5 天：发布前 2 篇内容', '第 6-7 天：设计一个引导私聊/留资的钩子']
+    intro: '你更适合从 内容型一人公司 开始。',
+    why: '你更擅长表达、建立信任、持续输出。你的一人公司更适合通过内容吸引人，再逐步完成变现。',
+    strengths: ['更适合长期积累个人资产', '更容易建立信任和影响力', '后续能延展课程、社群、咨询、产品'],
+    risks: ['前期容易只有流量没有收入', '很容易输出很多，却没有商业闭环', '如果不聚焦，很容易做成“内容很勤奋，业务没起色”'],
+    plan: ['明确一个细分主题', '确定一个目标用户', '连续输出 7 条围绕同一问题的内容', '观察哪类内容最有反馈', '设计第一个低门槛变现入口']
   },
   product: {
     key: 'product',
     name: '产品型一人公司',
-    intro: '你更适合做标准化产品，把个人能力沉淀成模板、工具、数字产品或小型 SaaS。',
-    strengths: ['可复制，边际成本低', '不强依赖一对一交付', '更容易形成长期资产'],
-    risks: ['前期打磨周期更长', '容易闭门造车', '需要持续验证需求'],
-    plan: ['第 1-2 天：定义一个最小产品', '第 3-4 天：做出可演示版本', '第 5 天：找 5 个目标用户试用', '第 6-7 天：根据反馈砍掉无效功能']
+    intro: '你更适合从 产品型一人公司 开始。',
+    why: '你更偏向标准化、系统化、可重复售卖的模式。你不想长期依赖一对一交付，更希望积累能放大的资产。',
+    strengths: ['更容易脱离时间换钱', '长期天花板更高', '一旦打磨好，复用效率很高'],
+    risks: ['很容易闭门造产品', '早期可能离收入较远', '如果没有真实需求验证，容易做无效产品'],
+    plan: ['先找一个具体人群', '明确一个高频问题', '设计一个最小产品雏形', '先卖预售或做验证，而不是闷头开发', '用真实反馈决定是否继续投入']
   },
   hybrid: {
     key: 'hybrid',
     name: '混合型一人公司',
-    intro: '你既有服务能力，也有表达和产品化潜力，适合先服务、再内容化、再产品化。',
-    strengths: ['路径最现实', '能滚动验证', '既能赚钱也能积累资产'],
-    risks: ['容易方向过多', '执行分散', '如果节奏不好会什么都做不深'],
-    plan: ['第 1-2 天：定义一个高价值服务', '第 3-4 天：把服务过程整理成内容', '第 5-6 天：提炼一个可复用模板', '第 7 天：明确下一步主路径，只保留一个重点']
+    intro: '你更适合走 混合型一人公司 路线。',
+    why: '你既需要现实收入，也适合逐步积累长期资产。最适合你的路径不是一步到位，而是：先服务，后内容，再产品化。',
+    strengths: ['路径最现实', '现金流和长期积累可以兼顾', '最适合多数普通人起步'],
+    risks: ['容易什么都做一点，最后不聚焦', '节奏不对时，会同时很忙又没积累', '如果不设阶段目标，很容易混乱'],
+    plan: ['先定义一个可卖服务', '同时开始记录你的方法和案例', '把交付过程整理成内容素材', '从服务中提炼模板或小产品', '逐步把“靠自己做”变成“靠流程和资产做”']
   }
 };
 
 const QUESTIONS = [
   {
     id: 1,
-    dimension: 'ability',
-    title: '如果让你明天开始赚钱，你最自然的方式是？',
+    dimension: 'start',
+    title: '如果让你现在开始赚钱，你更愿意靠哪种方式起步？',
     options: [
-      { text: '直接接项目、做咨询或代做', scores: { service: 3, hybrid: 1 } },
-      { text: '先分享观点吸引人，再转化成交', scores: { content: 3, hybrid: 1 } },
-      { text: '做一个可重复卖的模板或工具', scores: { product: 3, hybrid: 1 } },
-      { text: '先接服务单，再把过程沉淀成内容或产品', scores: { hybrid: 3, service: 1 } }
+      { text: '直接用现有能力帮别人解决问题', scores: { service: 2 } },
+      { text: '持续输出内容，先积累信任', scores: { content: 2 } },
+      { text: '做一个可重复卖的产品', scores: { product: 2 } },
+      { text: '先接服务，再慢慢做内容和产品', scores: { hybrid: 2 } }
     ]
   },
   {
     id: 2,
-    dimension: 'ability',
-    title: '你现阶段最拿得出手的是？',
+    dimension: 'advantage',
+    title: '你现在最拿得出手的优势是什么？',
     options: [
-      { text: '专业经验，能直接帮人解决问题', scores: { service: 3, hybrid: 1 } },
-      { text: '表达能力，能把复杂内容讲清楚', scores: { content: 3, hybrid: 1 } },
-      { text: '结构化能力，能把东西做成标准品', scores: { product: 3, hybrid: 1 } },
-      { text: '以上两种以上都还不错', scores: { hybrid: 3, content: 1, service: 1 } }
+      { text: '有明确技能，可以直接服务客户', scores: { service: 2 } },
+      { text: '会表达，会讲，会输出观点', scores: { content: 2 } },
+      { text: '擅长整理方法、工具、流程', scores: { product: 2 } },
+      { text: '几样都有一点，但都还没完全放大', scores: { hybrid: 2 } }
     ]
   },
   {
     id: 3,
-    dimension: 'ability',
-    title: '你更希望别人因为什么付费给你？',
+    dimension: 'sales',
+    title: '面对陌生客户，你的接受度更接近哪种？',
     options: [
-      { text: '我亲自出手解决问题', scores: { service: 3 } },
-      { text: '我的观点、经验和认知', scores: { content: 3 } },
-      { text: '我做出来的工具、模板或产品', scores: { product: 3 } },
-      { text: '一开始是服务，后面升级成内容和产品', scores: { hybrid: 3, service: 1 } }
+      { text: '可以直接聊需求、谈合作', scores: { service: 2 } },
+      { text: '不太想硬聊，更想通过内容吸引', scores: { content: 2 } },
+      { text: '希望尽量少靠一对一销售', scores: { product: 2 } },
+      { text: '前期能接受，后期想降低对销售依赖', scores: { hybrid: 2 } }
     ]
   },
   {
     id: 4,
-    dimension: 'expression',
-    title: '你对持续输出内容这件事的真实感受更接近？',
+    dimension: 'workstyle',
+    title: '你更喜欢哪种工作状态？',
     options: [
-      { text: '不排斥，但不想靠这个吃饭', scores: { service: 2, hybrid: 1 } },
-      { text: '我愿意长期输出，越写越有感觉', scores: { content: 3 } },
-      { text: '只在产品需要时输出，不想高频表达', scores: { product: 2 } },
-      { text: '愿意输出，但更想让输出服务成交和产品', scores: { hybrid: 3, content: 1 } }
+      { text: '直接服务人，快速拿结果', scores: { service: 2 } },
+      { text: '创作、表达、建立影响力', scores: { content: 2 } },
+      { text: '搭系统、做产品、一次做好多次卖', scores: { product: 2 } },
+      { text: '先靠服务活下来，再逐步系统化', scores: { hybrid: 2 } }
     ]
   },
   {
     id: 5,
-    dimension: 'expression',
-    title: '如果你要开一个公开账号，你最想发什么？',
+    dimension: 'monetization',
+    title: '你对“先慢慢积累，再后面变现”这件事怎么看？',
     options: [
-      { text: '案例拆解、实操经验', scores: { service: 2, hybrid: 1 } },
-      { text: '观点、方法论、成长记录', scores: { content: 3 } },
-      { text: '产品更新、工具教程、使用说明', scores: { product: 3 } },
-      { text: '成交案例 + 方法总结 + 产品沉淀', scores: { hybrid: 3 } }
+      { text: '不太行，我更想先赚到钱', scores: { service: 2 } },
+      { text: '可以接受，只要方向对', scores: { content: 2 } },
+      { text: '可以，但最终还是想靠产品放大', scores: { product: 2 } },
+      { text: '能接受一部分，但不能太久没收入', scores: { hybrid: 2 } }
     ]
   },
   {
     id: 6,
-    dimension: 'sales',
-    title: '面对销售和成交，你更像哪一种？',
+    dimension: 'income',
+    title: '如果你未来的一人公司只保留一种核心收入，你更想要哪种？',
     options: [
-      { text: '可以直接聊需求、报价、推进成交', scores: { service: 3, hybrid: 1 } },
-      { text: '更适合先靠内容建立信任，再转化', scores: { content: 3 } },
-      { text: '希望通过产品页面和自动化成交', scores: { product: 3 } },
-      { text: '我能接受销售，但希望逐步减少纯手工成交', scores: { hybrid: 3, product: 1 } }
+      { text: '高客单服务费', scores: { service: 2 } },
+      { text: '内容带来的广告/课程/社群收入', scores: { content: 2 } },
+      { text: '数字产品/工具/订阅收入', scores: { product: 2 } },
+      { text: '服务 + 内容/产品的组合收入', scores: { hybrid: 2 } }
     ]
   },
   {
     id: 7,
-    dimension: 'sales',
-    title: '你最能接受的第一笔收入来源是？',
+    dimension: 'skill',
+    title: '你更擅长哪种事情？',
     options: [
-      { text: '一对一咨询/陪跑', scores: { service: 3 } },
-      { text: '内容带来的广告、社群或知识产品', scores: { content: 3 } },
-      { text: '模板包、课程、工具订阅', scores: { product: 3 } },
-      { text: '服务单先跑起来，再延伸其他收入', scores: { hybrid: 3, service: 1 } }
+      { text: '针对具体问题给方案并落地', scores: { service: 2 } },
+      { text: '把复杂东西讲清楚', scores: { content: 2 } },
+      { text: '把经验做成模板、工具、流程', scores: { product: 2 } },
+      { text: '发现机会并把几种方式串起来', scores: { hybrid: 2 } }
     ]
   },
   {
     id: 8,
     dimension: 'risk',
-    title: '如果 30 天内必须验证方向，你会怎么选？',
+    title: '你对风险的态度更像哪种？',
     options: [
-      { text: '选最快拿到钱的方式', scores: { service: 3 } },
-      { text: '选最适合长期品牌积累的方向', scores: { content: 3 } },
-      { text: '选能沉淀成资产的产品方向', scores: { product: 3 } },
-      { text: '先用服务验证，再同步沉淀内容/产品', scores: { hybrid: 3 } }
+      { text: '先赚钱，稳一点', scores: { service: 2 } },
+      { text: '可以接受前期投入换长期收益', scores: { content: 2 } },
+      { text: '愿意花时间做更可规模化的东西', scores: { product: 2 } },
+      { text: '希望先稳住现金流，再逐步升级', scores: { hybrid: 2 } }
     ]
   },
   {
     id: 9,
-    dimension: 'risk',
-    title: '你对不确定性的接受程度更接近？',
+    dimension: 'positioning',
+    title: '你更想让别人因为什么来找你？',
     options: [
-      { text: '我希望尽快看见现金流', scores: { service: 3 } },
-      { text: '我接受慢一点，但希望做出影响力', scores: { content: 3 } },
-      { text: '我能忍前期打磨，换后期可复制', scores: { product: 3 } },
-      { text: '我希望同时兼顾现实收入和长期资产', scores: { hybrid: 3 } }
+      { text: '你能直接帮他解决问题', scores: { service: 2 } },
+      { text: '你有观点、有方法、有影响力', scores: { content: 2 } },
+      { text: '你有好产品或好工具', scores: { product: 2 } },
+      { text: '你既能帮忙，也能提供方法和产品', scores: { hybrid: 2 } }
     ]
   },
   {
     id: 10,
-    dimension: 'preference',
-    title: '你理想中的工作状态是？',
+    dimension: 'thirtyDays',
+    title: '如果给你 30 天时间，你更愿意做哪件事？',
     options: [
-      { text: '和客户深度合作，解决真实问题', scores: { service: 3 } },
-      { text: '持续输出，吸引认可你的人', scores: { content: 3 } },
-      { text: '优化一个产品，让它持续售卖', scores: { product: 3 } },
-      { text: '先靠服务成交，再逐步标准化和放大', scores: { hybrid: 3 } }
+      { text: '拿下第一个付费客户', scores: { service: 2 } },
+      { text: '连续输出 20 条优质内容', scores: { content: 2 } },
+      { text: '做出一个最小可卖产品', scores: { product: 2 } },
+      { text: '一边接单一边测试内容和产品', scores: { hybrid: 2 } }
     ]
   },
   {
     id: 11,
-    dimension: 'preference',
-    title: '你更想把时间花在哪里？',
+    dimension: 'avoidance',
+    title: '你最不想长期依赖的是什么？',
     options: [
-      { text: '高价值客户沟通和交付', scores: { service: 3 } },
-      { text: '写作、表达、建立连接', scores: { content: 3 } },
-      { text: '打磨产品、流程和系统', scores: { product: 3 } },
-      { text: '把成交、表达、产品沉淀连起来', scores: { hybrid: 3 } }
+      { text: '长时间免费输出', scores: { service: 2 } },
+      { text: '高频一对一交付', scores: { content: 2 } },
+      { text: '反复定制、每次都重做', scores: { product: 2 } },
+      { text: '单一收入来源', scores: { hybrid: 2 } }
     ]
   },
   {
     id: 12,
-    dimension: 'preference',
-    title: '未来 1 年，你最想看到哪种结果？',
+    dimension: 'ideal',
+    title: '你最理想的一人公司状态是什么？',
     options: [
-      { text: '有稳定高客单的服务收入', scores: { service: 3 } },
-      { text: '有一批持续关注并信任你的人', scores: { content: 3 } },
-      { text: '有一个能重复卖的产品', scores: { product: 3 } },
-      { text: '先赚钱，再把方法沉淀成内容和产品', scores: { hybrid: 3 } }
+      { text: '客单价高，客户少但收入稳', scores: { service: 2 } },
+      { text: '有稳定内容影响力和信任资产', scores: { content: 2 } },
+      { text: '有标准化产品，睡后也能成交', scores: { product: 2 } },
+      { text: '既有现金流，又能逐步积累资产', scores: { hybrid: 2 } }
     ]
   }
 ];
@@ -181,8 +185,11 @@ function calculateResult(answers = []) {
   });
 
   const ranking = Object.entries(total).sort((a, b) => b[1] - a[1]);
-  let winner = ranking[0][0];
-  if (ranking[0][1] - ranking[1][1] <= 2) {
+  const [firstKey, firstScore] = ranking[0] || ['hybrid', 0];
+  const [, secondScore] = ranking[1] || ['service', 0];
+
+  let winner = firstKey;
+  if (firstKey === 'hybrid' || firstScore - secondScore <= 2) {
     winner = 'hybrid';
   }
 

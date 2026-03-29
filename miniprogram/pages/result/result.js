@@ -1,5 +1,12 @@
 const app = getApp();
 
+const typeNameMap = {
+  service: '服务型',
+  content: '内容型',
+  product: '产品型',
+  hybrid: '混合型'
+};
+
 Page({
   data: {
     result: null,
@@ -15,7 +22,11 @@ Page({
     app.track('result_view', { winner: result.winner });
     this.setData({
       result,
-      typeEntries: result.ranking.map(([key, score]) => ({ key, score }))
+      typeEntries: result.ranking.map(([key, score]) => ({
+        key,
+        name: typeNameMap[key] || key,
+        score
+      }))
     });
   },
 

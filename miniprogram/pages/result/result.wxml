@@ -3,12 +3,12 @@
     <view class="tag">测试结果</view>
     <view class="title">{{result.profile.name}}</view>
     <view class="subtitle">{{result.profile.intro}}</view>
-    <button class="btn-primary" bindtap="goLead">领取专属行动清单</button>
+    <button class="btn-primary" bindtap="goLead">领取进一步方案</button>
   </view>
 
   <view class="card" style="margin-top: 24rpx;">
-    <view class="section-title">为什么适合你</view>
-    <view class="subtitle">{{result.profile.intro}}</view>
+    <view class="section-title">为什么适合</view>
+    <view class="subtitle">{{result.profile.why}}</view>
   </view>
 
   <view class="card" style="margin-top: 24rpx;">
@@ -26,9 +26,9 @@
   </view>
 
   <view class="card" style="margin-top: 24rpx;">
-    <view class="section-title">7 天起步建议</view>
+    <view class="section-title">7 天行动建议</view>
     <block wx:for="{{result.profile.plan}}" wx:key="index">
-      <view class="subtitle">· {{item}}</view>
+      <view class="subtitle">{{index + 1}}. {{item}}</view>
     </block>
   </view>
 
@@ -36,7 +36,7 @@
     <view class="section-title">类型得分</view>
     <block wx:for="{{typeEntries}}" wx:key="key">
       <view class="kpi">
-        <text>{{item.key}}</text>
+        <text>{{item.name}}</text>
         <text>{{item.score}}</text>
       </view>
     </block>
