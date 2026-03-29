@@ -1,0 +1,25 @@
+<view class="container">
+  <view class="card">
+    <view class="title">MVP 数据面板</view>
+    <view class="subtitle">当前是本地存储版，后续可替换为云数据库。</view>
+    <view class="kpi"><text>首页访问</text><text>{{metrics.homeViews}}</text></view>
+    <view class="kpi"><text>开始测试</text><text>{{metrics.starts}}</text></view>
+    <view class="kpi"><text>完成测试</text><text>{{metrics.completes}}</text></view>
+    <view class="kpi"><text>留资数</text><text>{{metrics.leads}}</text></view>
+    <view class="kpi"><text>类型分布</text><text>{{metrics.typeDistribution}}</text></view>
+  </view>
+
+  <view class="card" style="margin-top: 24rpx;">
+    <view class="section-title">留资记录</view>
+    <block wx:for="{{leads}}" wx:key="index">
+      <view class="subtitle">{{index + 1}}. {{item.nickname || '未填写'}} / {{item.phone || '-'}} / {{item.wechatId || '-'}} / {{item.result}}</view>
+    </block>
+  </view>
+
+  <view class="card" style="margin-top: 24rpx;">
+    <view class="section-title">最近事件</view>
+    <block wx:for="{{events}}" wx:key="index">
+      <view class="subtitle">{{item.event}} - {{item.ts}}</view>
+    </block>
+  </view>
+</view>

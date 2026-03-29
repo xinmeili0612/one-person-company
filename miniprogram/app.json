@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/quiz/quiz",
+    "pages/result/result",
+    "pages/lead/lead",
+    "pages/admin/admin"
+  ],
+  "window": {
+    "navigationBarTitleText": "一人公司测试",
+    "navigationBarBackgroundColor": "#F8F7F2",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#F8F7F2",
+    "backgroundTextStyle": "light"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="card">
+    <view class="tag">进度 {{currentIndex + 1}} / {{questions.length}}</view>
+    <view class="subtitle">已完成 {{progress}}%</view>
+    <view class="section-title" style="margin-top: 16rpx;">{{questions[currentIndex].title}}</view>
+
+    <block wx:for="{{questions[currentIndex].options}}" wx:key="index">
+      <button
+        class="option {{selectedIndex === index ? 'active' : ''}}"
+        data-index="{{index}}"
+        bindtap="selectOption"
+      >
+        {{item.text}}
+      </button>
+    </block>
+
+    <button class="btn-primary" bindtap="nextQuestion">{{currentIndex === questions.length - 1 ? '查看结果' : '下一题'}}</button>
+    <button class="btn-secondary" bindtap="prevQuestion">上一题</button>
+  </view>
+</view>

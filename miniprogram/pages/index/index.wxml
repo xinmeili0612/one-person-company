@@ -1,0 +1,17 @@
+<view class="container">
+  <view class="card">
+    <view class="tag">MVP 测试版</view>
+    <view class="title">测一测，你最适合做哪种一人公司。</view>
+    <view class="subtitle">3 分钟、12 道题，帮你快速判断更适合从服务、内容、产品，还是混合路径切入。</view>
+    <button class="btn-primary" bindtap="startQuiz">开始测试</button>
+  </view>
+
+  <view class="card" style="margin-top: 24rpx;">
+    <view class="section-title">你会拿到什么</view>
+    <view class="subtitle">· 你的类型判断</view>
+    <view class="subtitle">· 为什么适合这条路</view>
+    <view class="subtitle">· 你的优势与风险</view>
+    <view class="subtitle">· 7 天起步建议</view>
+    <view class="subtitle">· 领取详细行动清单入口</view>
+  </view>
+</view>

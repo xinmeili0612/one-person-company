@@ -1,0 +1,21 @@
+{
+  "miniprogramRoot": "miniprogram/",
+  "projectname": "one-person-company",
+  "description": "一人公司测试 MVP",
+  "appid": "touristappid",
+  "compileType": "miniprogram",
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": false,
+    "coverView": true,
+    "showShadowRootInWxmlPanel": true,
+    "packNpmRelationList": [],
+    "ignoreUploadUnusedFiles": true,
+    "compileHotReLoad": true
+  },
+  "simulatorType": "wechat",
+  "condition": {}
+}

@@ -1,0 +1,45 @@
+<view class="container" wx:if="{{result}}">
+  <view class="card">
+    <view class="tag">测试结果</view>
+    <view class="title">{{result.profile.name}}</view>
+    <view class="subtitle">{{result.profile.intro}}</view>
+    <button class="btn-primary" bindtap="goLead">领取专属行动清单</button>
+  </view>
+
+  <view class="card" style="margin-top: 24rpx;">
+    <view class="section-title">为什么适合你</view>
+    <view class="subtitle">{{result.profile.intro}}</view>
+  </view>
+
+  <view class="card" style="margin-top: 24rpx;">
+    <view class="section-title">你的优势</view>
+    <block wx:for="{{result.profile.strengths}}" wx:key="index">
+      <view class="subtitle">· {{item}}</view>
+    </block>
+  </view>
+
+  <view class="card" style="margin-top: 24rpx;">
+    <view class="section-title">你的风险</view>
+    <block wx:for="{{result.profile.risks}}" wx:key="index">
+      <view class="subtitle">· {{item}}</view>
+    </block>
+  </view>
+
+  <view class="card" style="margin-top: 24rpx;">
+    <view class="section-title">7 天起步建议</view>
+    <block wx:for="{{result.profile.plan}}" wx:key="index">
+      <view class="subtitle">· {{item}}</view>
+    </block>
+  </view>
+
+  <view class="card" style="margin-top: 24rpx;">
+    <view class="section-title">类型得分</view>
+    <block wx:for="{{typeEntries}}" wx:key="key">
+      <view class="kpi">
+        <text>{{item.key}}</text>
+        <text>{{item.score}}</text>
+      </view>
+    </block>
+    <button class="btn-secondary" bindtap="restart">重新测试</button>
+  </view>
+</view>
